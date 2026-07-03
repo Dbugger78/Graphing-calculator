@@ -5,7 +5,7 @@ screen = turtle.Screen()
 t = turtle.Turtle()
 t.speed(90000)
 
-# --- Draw Axes ---
+# Drawing Axis
 t.penup()
 # Draw X-axis
 t.goto(-360, 0)
@@ -18,7 +18,7 @@ t.pendown()
 t.goto(0, 150)
 t.penup()
 
-# --- Plot Sine Wave ---
+#Plotting the Sin wave
 for i in range(-360, 361):
     x = i
     y = math.sin(math.radians(x)) * 100
