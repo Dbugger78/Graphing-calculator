@@ -17,7 +17,7 @@ t.goto(0, -150)
 t.pendown()
 t.goto(0, 150)
 t.penup()
-# Actually plotting or graph
+# Actually plotting or graph If you update this then you must update the gradient calculation on line 31
 for i in range(-360, 361):
     x = i
     # Edit your mathematical function here
@@ -27,7 +27,8 @@ for i in range(-360, 361):
     t.goto(x, y)
     t.pendown()
     
-    # Derivative/gradient for x^2 + 2x + 1 scaled down by 100: (2x + 2) / 100
+# Finding gradient using simple derivation. If you edit the y axis formula you must edit the gradient. 
+#I have commented out the gradient temporarily  so the code doesn't print incorrect or misleading values while experimenting  with new mathematical functions.
     gradient = (2 * x + 2) / 100
     print(f"X: {x:.2f}, Y: {y:.2f}, gradient: {gradient:.3f}")
 
