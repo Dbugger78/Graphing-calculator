@@ -1,0 +1,38 @@
+import math
+import turtle
+
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.speed(90000)
+
+# Drawing Axis
+t.penup()
+# Draw X-axis
+t.goto(-360, 0)
+t.pendown()
+t.goto(360, 0)
+t.penup()
+# Draw Y-axis
+t.goto(0, -150)
+t.pendown()
+t.goto(0, 150)
+t.penup()
+
+#Plotting the Cos wave
+for i in range(-360, 361):
+    x = i
+    y = math.cos(math.radians(x)) * 100
+    
+    
+    t.goto(x, y)
+    t.pendown()
+    
+    # Gradient of the Cos Wave
+    gradient = -math.sin(math.radians(x)) * (math.pi / 180) * 100
+    print(f"X: {x:.2f}, Y: {y:.2f}, gradient: {gradient:.3f}")
+
+    # Check for turning points (gradient near zero because of how presice floats are
+    if abs(gradient) < 0.001:
+        print("Gradient is zero at x =", x)
+
+screen.mainloop()
