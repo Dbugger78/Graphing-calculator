@@ -27,7 +27,7 @@ for i in range(-360, 361):
     t.goto(x, y)
     t.pendown()
     
-    # Corrected gradient calculation (dy/dx) for scaled sine wave
+    # Gradeint Sin Wave
     gradient = math.cos(math.radians(x)) * (math.pi / 180) * 100
     print(f"X: {x:.2f}, Y: {y:.2f}, gradient: {gradient:.3f}")
 
