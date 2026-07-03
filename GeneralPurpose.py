@@ -18,21 +18,21 @@ t.pendown()
 t.goto(0, 150)
 t.penup()
 
-# --- Plot Sine Wave ---
+# --- Plot General Function ---
 for i in range(-360, 361):
     x = i
-    y = math.sin(math.radians(x)) * 100
+    # Edit your mathematical function here
+    y = (x**2 + 2*x + 1) / 100
     
     # Go to position and start drawing
     t.goto(x, y)
     t.pendown()
     
-    # Corrected gradient calculation (dy/dx) for scaled sine wave
-    gradient = math.cos(math.radians(x)) * (math.pi / 180) * 100
+    # Derivative/gradient for x^2 + 2x + 1 scaled down by 100: (2x + 2) / 100
+    gradient = (2 * x + 2) / 100
     print(f"X: {x:.2f}, Y: {y:.2f}, gradient: {gradient:.3f}")
 
-    # Check for turning points (gradient near zero due to float precision)
-    if abs(gradient) < 0.001:
+    if gradient == 0:
         print("Gradient is zero at x =", x)
 
 screen.mainloop()
