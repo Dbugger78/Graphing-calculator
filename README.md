@@ -17,7 +17,7 @@ My lightweight Python script that uses the turtle module wich is natively indtal
 ## Installation
 
 To use this code you must have python version 3 or higher .To install python you can visit
-*[https://www.python.org/downloads/](url)
+* [https://www.python.org/downloads/](url)
 
 #### To install it Via console you may run the command suited to you operating system
 * **Mac OS:**
